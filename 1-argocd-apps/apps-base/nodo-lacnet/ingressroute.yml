@@ -1,0 +1,14 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: base-metrics-ingress
+  namespace: base-metrics
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`dashboard.klocal.ticsmart.eu`)
+      services:
+        - name: base-metrics-grafana
+          port: 80

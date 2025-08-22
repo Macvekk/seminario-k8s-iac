@@ -1,0 +1,5 @@
+auth:
+  rootPassword: "rootpass123"
+  database: mydb
+  username: appuser
+  password: "password123"
