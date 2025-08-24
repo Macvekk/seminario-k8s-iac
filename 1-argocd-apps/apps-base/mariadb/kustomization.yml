@@ -2,13 +2,13 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-# - ingressroute.yml
+  - ingressroute.yml
 
 helmCharts:
-- name: mariadb
-  namespace: base-apps
-  releaseName: base-mariadb
-  repo: https://charts.bitnami.com/bitnami
-  valuesFile: values.yml
-  version: 21.0.7
-  includeCRDs: false
+  - name: mariadb
+    namespace: base-apps
+    releaseName: base-mariadb
+    repo: https://charts.bitnami.com/bitnami
+    valuesFile: values.yml
+    version: 21.0.7
+    includeCRDs: false
