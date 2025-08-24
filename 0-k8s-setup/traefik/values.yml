@@ -41,6 +41,10 @@ ports:
     port: 5433
     exposedPort: 5433
     protocol: TCP
+  nodolacnetp2p:
+    port: 4545
+    exposedPort: 4545
+    protocol: TCP
 
 service:
   enabled: true

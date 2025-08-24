@@ -1,8 +1,8 @@
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
-  name: base-metrics-ingress
-  namespace: base-metrics
+  name: base-masterapp-ingress
+  namespace: base-apps
 spec:
   entryPoints:
     - websecure
@@ -10,5 +10,5 @@ spec:
     - kind: Rule
       match: Host(`dashboard.klocal.ticsmart.eu`)
       services:
-        - name: base-metrics-grafana
+        - name: base-mariadb-service
           port: 80
